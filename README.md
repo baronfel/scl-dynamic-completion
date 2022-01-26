@@ -6,11 +6,11 @@ but cannot know the current date at compile-time, only at runtime.
 
 To test this:
 
-* run the app with `dotnet run [suggest] "some appointment" --date ""`
+* run the app with `dotnet run [suggest:20] "some appointment" --date `
 * you should see the next two weeks of dates printed to the command line:
 
 ```shell
-PS C:\Users\chethusk\oss\Scratch\scl-dynamic-completion> dotnet run [suggest] "blah blah" --date "1"
+PS C:\Users\chethusk\oss\Scratch\scl-dynamic-completion> dotnet run [suggest:20] "do the thing" --date
 1/27/2022
 1/28/2022
 1/29/2022
