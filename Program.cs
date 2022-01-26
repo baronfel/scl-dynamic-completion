@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System.CommandLine;
+﻿using System.CommandLine;
 using System.CommandLine.Completions;
 using System.CommandLine.Parsing;
 using System.CommandLine.Builder;
