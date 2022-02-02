@@ -4,7 +4,7 @@ using System.CommandLine.Completions;
 using System.CommandLine.Parsing;
 using System.CommandLine.Builder;
 
-new CommandLineBuilder(new DateCommand()).UseParseDirective().UseParseErrorReporting().UseExceptionHandler().UseHelp().UseSuggestDirective().Build().InvokeAsync(args);
+new CommandLineBuilder(new DateCommand()).UseParseDirective().UseParseErrorReporting().UseExceptionHandler().UseHelp().RegisterWithDotnetSuggest().UseSuggestDirective().Build().InvokeAsync(args);
 
 class DateCommand : Command
 {
