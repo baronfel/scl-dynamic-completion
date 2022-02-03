@@ -16,8 +16,11 @@ class DateCommand : Command
             var today = System.DateTime.Today;
             var dates = new List<CompletionItem>();
             foreach (var i in Enumerable.Range(1, 14)) {
+                 var date = today.AddDays(i);
                  dates.Add (new CompletionItem(
-                        today.AddDays(i).ToShortDateString(),  // actual value
+                        date.ToShortDateString(),  // actual value
+                        documentation: $"{date.ToLongDateString()}",
+                        detail: "The date is a beautiful, wonderful thing",
                         sortText: $"{i:2}" // convert the integer to 2-digits in length, so that sorting is based on 01, 02, ..., 14.
                                            // without this, the dates are sorted based on the Label, which is incorrect
                 ));
